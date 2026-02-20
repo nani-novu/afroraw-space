@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alyssa Miller | NastyQueens</title>
+    <style>
+        /* Reset and Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f9fafb; /* Light gray background like the browser view */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Main Layout */
+.main-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Card Styling */
+.card {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 360px; /* Limits width to mimic mobile size on desktop */
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); /* Soft shadow */
+}
+
+/* Image Styling */
+.image-link {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+}
+
+.preview-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9; /* Maintains video thumbnail proportions */
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+/* Typography */
+.model-name {
+    font-size: 22px;
+    font-weight: 700;
+    color: #3b82f6; /* The specific bright blue from the screenshot */
+    margin: 16px 0 24px 0;
+    text-align: left;
+    letter-spacing: -0.5px;
+}
+
+/* Button Layout */
+.button-container {
+    display: flex;
+    gap: 12px; /* Space between buttons */
+    justify-content: space-between;
+}
+
+/* Button Styling */
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1; /* Makes buttons grow equally to fill space */
+    background-color: #818cf8; /* Periwinkle/Light Purple color */
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    padding: 18px 10px;
+    border-radius: 8px;
+    line-height: 1.4;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+/* Hover Effects */
+.btn:active {
+    transform: scale(0.98); /* Subtle press effect */
+    background-color: #6366f1;
+}
+
+.btn:hover {
+    background-color: #727bf0;
+}
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="card">
+            <!-- Replace the src below with your actual image URL -->
+            <a href="https://rebrandlink.com/dl/312701" class="image-link">
+                <img src="assets/img/20260215_115619.jpg" alt="Preview Image" class="preview-image">
+            </a>
+
+            <h1 class="model-name">Alyssa Miller</h1>
+
+            <div class="button-container">
+                <a href="https://rebrandlink.com/dl/312701" class="btn btn-primary">
+                    Get <br> Video
+                </a>
+                <a href="https://rebrandlink.com/dl/312701" class="btn btn-primary">
+                    Watch <br> Online
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    // Select all buttons
+    const buttons = document.querySelectorAll('.btn');
+    const imageLink = document.querySelector('.image-link');
+
+    // Function to handle click events
+    const handleNavigation = (event) => {
+        // This is where you would handle analytics or redirection logic
+        console.log(`Navigating to: ${event.currentTarget.getAttribute('href')}`);
+        
+        // Optional: If you want to confirm action before leaving
+        // event.preventDefault();
+        // alert("Redirecting to video...");
+        // window.location.href = event.currentTarget.getAttribute('href');
+    };
+
+    // Attach listeners
+    buttons.forEach(btn => {
+        btn.addEventListener('click', handleNavigation);
+    });
+
+    if (imageLink) {
+        imageLink.addEventListener('click', handleNavigation);
+    }
+});
+    </script>
+</body>
+</html>
