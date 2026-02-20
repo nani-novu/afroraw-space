@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AfroRaw | Exclusive Content - Watch Now</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #ff0050;
+            --hover-color: #d60043;
+            --text-color: #ffffff;
+            --overlay-color: rgba(0, 0, 0, 0.75);
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body, html {
+            height: 100%;
+            font-family: 'Montserrat', sans-serif;
+            overflow: hidden;
+        }
+
+        .bg-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-image: url('assets/img/IMG-20260220-WA0008.jpg'); 
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--overlay-color);
+            backdrop-filter: blur(4px);
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 1.2s ease-out forwards;
+        }
+
+        .watch-btn {
+            position: relative;
+            padding: 20px 50px;
+            font-size: 1.5rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: var(--text-color);
+            background: linear-gradient(45deg, #ff3e3e, #ff0050);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 10px 25px rgba(255, 0, 80, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+            letter-spacing: 2px;
+            margin-bottom: 40px;
+        }
+
+        .watch-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 15px 35px rgba(255, 0, 80, 0.7);
+        }
+
+        .watch-btn:active {
+            transform: translateY(1px);
+        }
+
+        .ripple {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            transform: scale(0);
+            animation: ripple 0.6s linear;
+            pointer-events: none;
+        }
+
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 25px;
+        }
+
+        .social-link {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 2rem;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .social-link:hover {
+            color: #fff;
+            transform: translateY(-5px);
+        }
+
+        .social-link.fb:hover { background: #1877F2; border-color: #1877F2; }
+        .social-link.tw:hover { background: #000000; border-color: #fff; }
+        .social-link.tg:hover { background: #0088cc; border-color: #0088cc; }
+        .social-link.tk:hover { 
+            background: linear-gradient(45deg, #69C9D0, #EE1D52); 
+            border-color: transparent; 
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 0, 80, 0.7); }
+            70% { box-shadow: 0 0 0 20px rgba(255, 0, 80, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 0, 80, 0); }
+        }
+
+        @keyframes ripple {
+            to { transform: scale(4); opacity: 0; }
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 600px) {
+            .watch-btn {
+                font-size: 1.2rem;
+                padding: 18px 40px;
+                width: 80%;
+            }
+            
+            .social-icons {
+                gap: 15px;
+            }
+
+            .social-link {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-container">
+        <div class="overlay"></div>
+    </div>
+
+    <div class="content container">
+        <a href="https://rebrandlink.com/dl/312701" class="watch-btn pulse-animation" id="watchBtn">
+            Watch Now <i class="fa-solid fa-play" style="margin-left: 10px; font-size: 0.8em;"></i>
+        </a>
+
+        <div class="social-icons">
+            <a href="https://rebrandlink.com/dl/312701" class="social-link fb" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://rebrandlink.com/dl/312701" class="social-link tw" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://rebrandlink.com/dl/312701" class="social-link tg" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+            <a href="https://rebrandlink.com/dl/312701" class="social-link tk" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+    </div>
+    
+    <script>
+        // JavaScript for Ripple Effect on Button Click
+        const btn = document.getElementById('watchBtn');
+
+        btn.addEventListener('click', function(e) {
+            // If you want to prevent actual navigation for testing, uncomment below:
+            // e.preventDefault();
+
+            let x = e.clientX - e.target.getBoundingClientRect().left;
+            let y = e.clientY - e.target.getBoundingClientRect().top;
+
+            let ripples = document.createElement('span');
+            ripples.style.left = x + 'px';
+            ripples.style.top = y + 'px';
+            ripples.classList.add('ripple');
+            
+            this.appendChild(ripples);
+
+            setTimeout(() => {
+                ripples.remove();
+            }, 600); // Remove span after animation
+        });
+
+        // Optional: Dynamic Background parallax effect on mouse move (Desktop only)
+        const bgContainer = document.querySelector('.bg-container');
+        document.addEventListener('mousemove', (e) => {
+            if(window.innerWidth > 768) {
+                const x = (window.innerWidth - e.pageX * 2) / 100;
+                const y = (window.innerHeight - e.pageY * 2) / 100;
+                bgContainer.style.transform = `translateX(${x}px) translateY(${y}px) scale(1.05)`;
+            }
+        });
+    </script>
+</body>
+</html>
