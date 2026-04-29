@@ -59,7 +59,7 @@ body {
 .model-name {
     font-size: 22px;
     font-weight: 700;
-    color: #3b82f6; /* The specific bright blue from the screenshot */
+    color: #000;
     margin: 16px 0 24px 0;
     text-align: left;
     letter-spacing: -0.5px;
@@ -73,12 +73,12 @@ body {
 }
 
 /* Button Styling */
-.btn {
+.btn-primary {
     display: flex;
     align-items: center;
     justify-content: center;
     flex: 1; /* Makes buttons grow equally to fill space */
-    background-color: #818cf8; /* Periwinkle/Light Purple color */
+    background-color: #dc2221;
     color: white;
     text-decoration: none;
     font-weight: 500;
@@ -90,14 +90,32 @@ body {
     transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
+.btn-secondary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1; /* Makes buttons grow equally to fill space */
+    background-color: #000;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    padding: 18px 10px;
+    border-radius: 8px;
+    line-height: 1.4;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+        
 /* Hover Effects */
 .btn:active {
     transform: scale(0.98); /* Subtle press effect */
-    background-color: #6366f1;
+    background-color: #D52928;
 }
 
 .btn:hover {
-    background-color: #727bf0;
+    background-color: #D52928;
 }
     </style>
     <!-- Matomo -->
@@ -131,7 +149,7 @@ body {
                 <a href="https://c.adsco.re/r#apikey=QnHkBQAAAAAAW18I8clgQxVSG7MNRjTOhn5I2Lk&sub_id=youtube&type=3&data=AAILenNALB9K2JcbNiJ-D3I8i9No6JBfirX3xf25tUXEC_wfct-AlFWEevX5hHwUcgynl8wF3TRnjW-d8V8DSeFtxVGD4bi94PWxZwSKSa3eTQ" class="btn btn-primary">
                     Yes
                 </a>
-                <a href="https://c.adsco.re/r#apikey=QnHkBQAAAAAAW18I8clgQxVSG7MNRjTOhn5I2Lk&sub_id=youtube&type=3&data=AAILenNALB9K2JcbNiJ-D3I8i9No6JBfirX3xf25tUXEC_wfct-AlFWEevX5hHwUcgynl8wF3TRnjW-d8V8DSeFtxVGD4bi94PWxZwSKSa3eTQ" class="btn btn-primary">
+                <a href="https://c.adsco.re/r#apikey=QnHkBQAAAAAAW18I8clgQxVSG7MNRjTOhn5I2Lk&sub_id=youtube&type=3&data=AAILenNALB9K2JcbNiJ-D3I8i9No6JBfirX3xf25tUXEC_wfct-AlFWEevX5hHwUcgynl8wF3TRnjW-d8V8DSeFtxVGD4bi94PWxZwSKSa3eTQ" class="btn btn-secondary">
                     No
                 </a>
             </div>
